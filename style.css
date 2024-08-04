@@ -270,5 +270,6 @@ header{
     padding: 5px;
     border-top: 1px solid rgb(213, 214, 214);
     color: grey;
+    cursor: pointer;
 
 }
