@@ -26,11 +26,11 @@ header{
     border-radius: 20px;
     height: 39px;
     width: 250px;
-    cursor:ne-resize;
+    cursor:text;
     font-size: 15px;
 }
 .search input:focus{
-    border: 0px solid none;
+    border: none;
 }
 .perfil{
     display: flex;
@@ -75,7 +75,10 @@ header{
     background-color: rgb(243, 245, 245);
     width: 100vw;
     height: 100vh;
-    z-index: 1; /* Ajusta según sea necesario */
+    z-index: 1;
+}
+.menu_left i, .menu_right i {
+    font-size: 20px;
 }
 .menu_left{
     position: fixed;
@@ -87,10 +90,14 @@ header{
     background-color: rgb(243, 245, 245);
     font-size: 12px;
     padding: 10px;
-    overflow-x: hidden; /* Oculta la barra de desplazamiento*/
+    overflow-y: hidden; /* Oculta la barra de desplazamiento*/
     scrollbar-width:thin;
     z-index: 3;
     box-sizing: border-box;
+}
+.menu_left img{
+    width: 30px;
+    height: 30px;
 }
 .contenido button{
     background: none;
@@ -114,26 +121,61 @@ header{
     background-color: rgb(243, 245, 245);
     font-size: 12px;
     padding: 10px;
-    overflow-x: hidden; /* Oculta la barra de desplazamiento*/
+    overflow-y: hidden; /* Oculta la barra de desplazamiento*/
     scrollbar-width:thin;
     z-index: 3;
     box-sizing: border-box;
 }
-
+.menu_right img{
+    width: 50px;
+    height: 50px;
+}
+.menu_right button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu_right span{
+    font-size: 16px;
+    font-weight: bold;
+    color: grey;
+}
+.fa-gift{
+    font-size: 25px;
+}
+.menu_left .show-scrollbar, .menu_right .show-scrollbar {
+    overflow-y: auto; /* Muestra la barra de desplazamiento */
+}
+.publicidad {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+.publicidad img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.publicidad h1 {
+    margin: 0;
+    font-size: 15px;
+}
 .historias{
     margin: 0;
-    padding: 0;
+    padding: 2px;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(auto-fill, 150px);
-    gap: 8px;
+    gap: 5px;
     width: 620px;
-    height: 300px;
+    height: 290px;
     position: relative;
     top: 230px;
     left: 52%;
     transform: translate(-50%, -50%); 
-    background-color: rgb(76, 80, 80);
+    background-color: rgb(243, 245, 245);
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -142,8 +184,8 @@ header{
     display: flex;
 }
 .historias img {
-    width: 150px;
-    height: 300px;
+    width: 144px;
+    height: 270px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -154,7 +196,7 @@ header{
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 5px;
+    padding: 17px;
     font-weight: bold;
     color: white;
     text-align:left;
@@ -165,4 +207,68 @@ header{
     top: 10px;
     left: 10px;
     font-size: 30px;
+}
+.historias button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.prev {
+    left: -25px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+.next {
+    right: -25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} 
+.publi {
+    width: 500px;
+    height: 120px;
+    position: relative;
+    left: 52%;
+    transform: translate(-50%, -50%); 
+    background-color: white;
+    margin-top: 180px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.publi .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.publi i {
+    font-size: 25px;
+    color: grey;
+    margin-right: 10px;
+}
+.publi input{
+    background-color: rgb(243, 245, 245);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+}
+.botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border-top: 1px solid rgb(213, 214, 214);
+    color: grey;
+    cursor: pointer;
 }
